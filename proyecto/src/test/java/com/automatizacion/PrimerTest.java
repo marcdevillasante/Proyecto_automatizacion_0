@@ -2,6 +2,7 @@ package com.automatizacion;
 
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class PrimerTest {
@@ -12,6 +13,13 @@ public class PrimerTest {
         //Paso 2: Abrir el navegador en una URL
         driver.get("https://www.saucedemo.com/");
         //Cerrar el navegador
-       // driver.quit();
+        // driver.quit();
+    }
+    public void testChrome() {
+        // Paso 1: Definir el navegador a utilizar
+        WebDriver driver = new ChromeDriver();
+        driver.get ("https://www.saucedemo.com");
+        //Cerrar el navegador
+        // driver.quit();
     }
 }
