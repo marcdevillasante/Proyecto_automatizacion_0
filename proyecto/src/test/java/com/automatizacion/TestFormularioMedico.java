@@ -2,7 +2,6 @@ package com.automatizacion;
 
 import java.time.Duration;
 
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,6 +9,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 
 public class TestFormularioMedico {
@@ -33,10 +33,10 @@ public class TestFormularioMedico {
         /* PARTE II: Inicio de Sesión */
 
         // Obtener el valor del usuario (está en la página principal)
-        //WebElement txtUsuario = driver.findElement(By.cssSelector("input[placeholder='Username'][value='John Doe']"));
-        //String valorUsuario = txtUsuario.getText();
+        WebElement txtUsuario = driver.findElement(By.cssSelector("input[placeholder='Username'][value='John Doe']"));
+        String valorUsuario = txtUsuario.getAttribute("value");
 
-        driver.findElement(By.name("username")).sendKeys("John Doe");
+        driver.findElement(By.name("username")).sendKeys(valorUsuario);
         driver.findElement(By.id("txt-password")).sendKeys("ThisIsNotAPassword");
 
         // Hacer clic en el botón LOGIN
@@ -72,8 +72,8 @@ public class TestFormularioMedico {
         String UrlValida="https://katalon-demo-cura.herokuapp.com/appointment.php#summary";
         String UrlActual;
         UrlActual=driver.getCurrentUrl();
-        System.out.println(UrlActual);
-        if (UrlActual.equals(UrlValida)) {
+        System.out.println("Url actual: "+ UrlActual);
+        if (UrlActual.equalsIgnoreCase(UrlValida)) {
             System.out.println("URL correcta");
         }else{
             System.out.println("URL incorrecta");
