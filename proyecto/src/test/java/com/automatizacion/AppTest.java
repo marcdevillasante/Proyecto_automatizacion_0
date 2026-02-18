@@ -1,8 +1,9 @@
 package com.automatizacion;
 
-import static org.junit.Assert.assertTrue;
-
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+//import org.junit.Test;
+//import static org.junit.Assert.assertTrue;
 
 /**
  * Unit test for simple App.
@@ -15,6 +16,6 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+        Assert.assertTrue( true );
     }
 }

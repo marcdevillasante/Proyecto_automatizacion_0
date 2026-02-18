@@ -1,9 +1,9 @@
 package com.automatizacion;
 
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.Test;
 
 public class PrimerTest {
     @Test
