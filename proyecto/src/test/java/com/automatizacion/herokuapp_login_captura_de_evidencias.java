@@ -14,7 +14,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import com.automatizacion.Resources.utilities.Utils;
+import com.automatizacion.utilities.Utils;
 
 public class herokuapp_login_captura_de_evidencias {
     String url = "https://the-internet.herokuapp.com/login";

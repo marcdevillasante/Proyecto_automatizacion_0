@@ -1,4 +1,4 @@
-package com.automatizacion.Resources.Paginas;
+package com.automatizacion.Paginas;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

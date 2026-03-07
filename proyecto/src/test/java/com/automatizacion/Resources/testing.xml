@@ -5,7 +5,7 @@
 <suite name="MiSuite">
   <test name="RegressionTest">
     <classes>
-      <class name="com.automatizacion.PrimerTest"/>
+      <class name="com.automatizacion.pruebas.SauceDemo.SauceDemo_LoginTest"/>
     </classes>
   </test>
 </suite>

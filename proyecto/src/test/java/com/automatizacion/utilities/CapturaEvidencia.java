@@ -1,4 +1,4 @@
-package com.automatizacion.Resources.utilities;
+package com.automatizacion.utilities;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -1,4 +1,4 @@
-package com.automatizacion.Resources.Pruebas;
+package com.automatizacion.Pruebas;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -6,10 +6,10 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import com.automatizacion.Resources.Paginas.PaginaFormulario;
-import com.automatizacion.Resources.Paginas.PaginaInicio;
-import com.automatizacion.Resources.Paginas.PaginaLogin;
-import com.automatizacion.Resources.Paginas.PaginaSumario;
+import com.automatizacion.Paginas.PaginaFormulario;
+import com.automatizacion.Paginas.PaginaInicio;
+import com.automatizacion.Paginas.PaginaLogin;
+import com.automatizacion.Paginas.PaginaSumario;
 
 public class SolicitarTurnoTest {
     String url = "https://katalon-demo-cura.herokuapp.com/profile.php";
