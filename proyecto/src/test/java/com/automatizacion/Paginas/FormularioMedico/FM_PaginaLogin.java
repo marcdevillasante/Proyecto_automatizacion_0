@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class FM_PaginaLogin {
-    @FindBy(css="label[for='txt-username']")
+    @FindBy(id="txt-username")
     WebElement txtUsername;
 
     @FindBy(id="txt-password")

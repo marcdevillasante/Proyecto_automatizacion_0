@@ -22,15 +22,16 @@ public class FM_FormularioMedicoTest {
         driver = new EdgeDriver();
         driver.get(url); // es igual driver.navigate().to(url);
         driver.manage().window().maximize();
-    }
-
-    @Test (dataProvider = "Datos Appointment Excel")
-    public void FM_FormularioMedico(String opcion, String aplicacion, String programa, String fecha, String comentario){
         FM_PaginaLogin login = new FM_PaginaLogin(driver);
                 
         login.escribirUsername("John Doe");
         login.escribirPassword("ThisIsNotAPassword");
         login.hacerClicEnBtnLogin();
+    }
+
+    @Test (dataProvider = "Datos Appointment Excel")
+    public void FM_FormularioMedico(String opcion, String aplicacion, String programa, String fecha, String comentario){
+        
 
         FM_PaginaMakeAppointment appointment = new FM_PaginaMakeAppointment(driver);
         appointment.seleccionarFacility(opcion);
@@ -56,7 +57,7 @@ public class FM_FormularioMedicoTest {
         
         FM_PaginaSumario sumario = new FM_PaginaSumario(driver);
         sumario.hacerClicEnGoToHomepage();
-        
+
     } 
     @DataProvider(name="Datos Appointment Excel")
     public Object[][] obtenerDatosLoginExcel() throws Exception{
