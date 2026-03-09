@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import com.automatizacion.Paginas.FormularioMedico.FM_PaginaLogin;
 import com.automatizacion.Paginas.FormularioMedico.FM_PaginaMakeAppointment;
+import com.automatizacion.Paginas.FormularioMedico.FM_PaginaSumario;
 import com.automatizacion.utilities.DatosExcel;
 
 public class FM_FormularioMedicoTest {
@@ -24,7 +25,7 @@ public class FM_FormularioMedicoTest {
     }
 
     @Test (dataProvider = "Datos Appointment Excel")
-    public void FM_FormularioMedico(String opcion, boolean aplicacion, String programa, String fecha, String comentario){
+    public void FM_FormularioMedico(String opcion, String aplicacion, String programa, String fecha, String comentario){
         FM_PaginaLogin login = new FM_PaginaLogin(driver);
                 
         login.escribirUsername("John Doe");
@@ -33,7 +34,7 @@ public class FM_FormularioMedicoTest {
 
         FM_PaginaMakeAppointment appointment = new FM_PaginaMakeAppointment(driver);
         appointment.seleccionarFacility(opcion);
-        if (aplicacion){
+        if (aplicacion.equalsIgnoreCase("Yes")){
             appointment.hacerClicEnHospital(aplicacion);
         }
         
@@ -53,12 +54,15 @@ public class FM_FormularioMedicoTest {
         appointment.rellenarComentario(comentario);
         appointment.hacerClicEnBtnBookAppointment();
         
+        FM_PaginaSumario sumario = new FM_PaginaSumario(driver);
+        sumario.hacerClicEnGoToHomepage();
+        
     } 
     @DataProvider(name="Datos Appointment Excel")
     public Object[][] obtenerDatosLoginExcel() throws Exception{
         String directorioEvidencias=".//src//test//java//com//automatizacion//resources//";
         String nombreArchivo="DatosAppointment.xlsx";
-        String nombreHoja="Hoja1";
+        String nombreHoja="Hoja 1";
 
         return DatosExcel.readExcel(directorioEvidencias+nombreArchivo, nombreHoja);
     }

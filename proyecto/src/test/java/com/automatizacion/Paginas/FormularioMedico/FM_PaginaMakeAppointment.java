@@ -42,7 +42,7 @@ public class FM_PaginaMakeAppointment {
         select.selectByVisibleText(opcion);
     }
 
-    public void hacerClicEnHospital(boolean aplicacion){
+    public void hacerClicEnHospital(String aplicacion){
         chkHopital.click();
     }
     
