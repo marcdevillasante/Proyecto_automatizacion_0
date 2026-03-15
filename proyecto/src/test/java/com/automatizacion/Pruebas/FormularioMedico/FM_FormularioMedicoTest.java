@@ -17,10 +17,11 @@ public class FM_FormularioMedicoTest {
     String url="https://katalon-demo-cura.herokuapp.com/profile.php#login";
     WebDriver driver;
 
+    @SuppressWarnings("null")
     @BeforeSuite
     public void setUp() {
         driver = new EdgeDriver();
-        driver.get(url); // es igual driver.navigate().to(url);
+        driver.get(url); 
         driver.manage().window().maximize();
         FM_PaginaLogin login = new FM_PaginaLogin(driver);
                 

@@ -39,6 +39,7 @@ public class SD_PaginaLogin {
         txtPassword.sendKeys(password);
     }
 
+    @SuppressWarnings("null")
     public void hacerClicEnBtnLogin(){
         WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(10));
         espera.until(ExpectedConditions.elementToBeClickable(btnLogin));

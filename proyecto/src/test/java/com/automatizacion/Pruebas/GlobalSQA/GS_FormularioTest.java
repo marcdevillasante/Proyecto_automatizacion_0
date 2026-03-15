@@ -14,6 +14,7 @@ public class GS_FormularioTest {
     String url="https://www.globalsqa.com/samplepagetest/";
     WebDriver driver;
 
+    @SuppressWarnings("null")
     @BeforeSuite
     public void setUp(){
         WebDriverManager.chromedriver().setup();

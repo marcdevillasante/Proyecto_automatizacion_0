@@ -15,6 +15,7 @@ public class SolicitarTurnoTest {
     String url = "https://katalon-demo-cura.herokuapp.com/profile.php";
     WebDriver driver;
 
+    @SuppressWarnings("null")
     @BeforeSuite
     public void setUp() {
         driver = new EdgeDriver();
