@@ -22,6 +22,7 @@ public class herokuapp_login_captura_de_evidencias {
     File screen;
     String directorioEvidencias = "./Evidencias/";
 
+    @SuppressWarnings("null")
     @BeforeSuite
     public void setUp() {
         EdgeOptions options = new EdgeOptions();

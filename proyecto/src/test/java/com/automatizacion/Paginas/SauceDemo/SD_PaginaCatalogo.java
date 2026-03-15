@@ -27,6 +27,7 @@ public class SD_PaginaCatalogo {
         btnMenu.click();
     }
 
+    @SuppressWarnings("null")
     public void hacerClicEnLogout(){
         WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(10));
         espera.until(ExpectedConditions.elementToBeClickable(lnkLogout));

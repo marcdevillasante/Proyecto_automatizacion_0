@@ -24,6 +24,7 @@ public class CrearOrdenSauceDemo_CapturaEvidencias {
     File screen;
     String directorioEvidencias = ".//Evidencias/";
 
+    @SuppressWarnings("null")
     @BeforeSuite(alwaysRun=true)
     public void abrirNavegador() {
         driver = new EdgeDriver();

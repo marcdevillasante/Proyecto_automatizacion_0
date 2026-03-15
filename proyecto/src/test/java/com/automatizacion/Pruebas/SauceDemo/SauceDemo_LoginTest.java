@@ -15,6 +15,7 @@ public class SauceDemo_LoginTest {
     String url="https://www.saucedemo.com/";
     WebDriver driver;
 
+    @SuppressWarnings("null")
     @BeforeSuite
     public void setUp(){
         driver = new EdgeDriver();

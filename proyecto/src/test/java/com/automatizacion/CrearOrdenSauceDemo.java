@@ -18,6 +18,7 @@ public class CrearOrdenSauceDemo {
     String url = "https://www.saucedemo.com";
     WebDriver driver;
 
+    @SuppressWarnings("null")
     @BeforeSuite
     public void abrirNavegador() {
         driver = new EdgeDriver();

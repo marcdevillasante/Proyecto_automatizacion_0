@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class Practica1 {
+    @SuppressWarnings("null")
     @Test
     public void testEdge() {
         //Practica 4 - Proyecto real

@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 public class TestFormularioMedico {
     String url = "https://katalon-demo-cura.herokuapp.com/";
 
+    @SuppressWarnings("null")
     @Test
     public void solicitarTurnoMedico() {
         WebDriver driver = new EdgeDriver();
