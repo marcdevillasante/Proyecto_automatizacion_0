@@ -22,6 +22,10 @@ public class SD_PaginaLogin {
     @FindBy(css=".error-button")
     WebElement btnError;
 
+    @FindBy(css=".title")
+    public
+    WebElement lblProducts;
+
     WebDriver driver;
 
     public SD_PaginaLogin(WebDriver driver){
@@ -55,5 +59,16 @@ public class SD_PaginaLogin {
         txtUsername.clear();
         txtPassword.clear();
         btnError.click();
+    }
+
+    @SuppressWarnings("null")
+    public boolean verificarIngresoExitoso(){
+        WebDriverWait espera = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            espera.until(ExpectedConditions.visibilityOf(lblProducts));
+            return lblProducts.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

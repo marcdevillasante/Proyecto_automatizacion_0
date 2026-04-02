@@ -1,0 +1,6 @@
+{
+  "default": {
+    "paths": ["src/test/java/com/automatizacion/Resources/features/**/*.feature"],
+    "require": ["src/test/java/com/automatizacion/Steps/**/*.java"]
+  }
+}
